@@ -1,4 +1,5 @@
 // Your code goes here
+
 //footer
  //mouse over footer turns footer blue
 const foot = document.querySelector('.footer');
@@ -41,7 +42,7 @@ head.addEventListener('click', function (e) {
 
 const mainHead = document.querySelector('.main-navigation .logo-heading');
 window.addEventListener('keydown', function (e) {
-console.log ('clicked');
+console.log (e);
 document.querySelector('.main-navigation  .logo-heading').style.backgroundColor= 'red';
 })  
                 
@@ -73,7 +74,7 @@ const btn2 = document.querySelectorAll('.content-pick .btn');
 // right click text display none
 const dest = document.querySelector('.content-destination h2');
 dest.addEventListener('contextmenu', function (e) {
-console.log ('select');
+console.log ('right');
 document.querySelector('.content-destination h2').style.display='none';})
 
 
@@ -89,7 +90,7 @@ document.querySelector('.content-pick h4').style.display='none';})
 
 const footp = document.querySelector('.footer');
 window.addEventListener('keypress', function (e) {
-console.log ('key press');
+
 document.querySelector('.footer').style.backgroundColor='pink';})
 
 //nav
