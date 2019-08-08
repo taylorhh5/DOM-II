@@ -46,12 +46,6 @@ console.log (e);
 document.querySelector('.main-navigation  .logo-heading').style.backgroundColor= 'red';
 })  
                 
-/// changes color of main header whe scrolled on
-const mainNav = document.querySelector('.main-navigation');
-mainNav.addEventListener('wheel', function (e) {
-console.log ('wheel');
-document.querySelector('.main-navigation').style.backgroundColor='grey';
-})
 
 
 
@@ -115,4 +109,42 @@ nav.forEach(element => {
   destination2.addEventListener('mouseover', function (e) {
     e.target.style.fontSize= '9rem';
     event.stopPropagation();
+
   }) 
+
+
+
+  
+
+
+  
+  const destination3 = document.querySelector('.content-destination p');
+  destination3.addEventListener('mouseover', function (e) {
+    e.target.style.backgroundColor= 'red';
+    
+
+  })  
+  
+
+
+// changes color of main header whe scrolled on
+const mainNav = document.querySelector('.main-navigation');
+mainNav.addEventListener('wheel', function (e) {
+console.log ('wheel');
+document.querySelector('.main-navigation').style.backgroundColor='grey';
+})
+
+
+
+
+// stopPropagation prevents parent from firing. Without stopPropagation .main-navigation would turn grey on mouse scroll on .nav.
+            
+    const navscroll = document.querySelector('.nav');
+
+    navscroll.addEventListener('wheel', function (e) {
+        document.querySelector('.nav').style.backgroundColor='yellow';
+        event.stopPropagation();
+
+
+    })
+            
